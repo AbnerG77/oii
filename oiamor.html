@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Te amo</title>
   <style>
     body {
@@ -14,7 +15,7 @@
       justify-content: center;
       flex-direction: column;
       padding: 5vh 2vw;
-      height: 100vh;
+      min-height: 100vh;
       box-sizing: border-box;
     }
 
@@ -38,24 +39,39 @@
       border-radius: 16px;
       border: 2px solid #d33682;
       box-shadow: 0 0 20px rgba(211, 54, 130, 0.25);
+      background: #000;
     }
 
     small {
       margin-top: 2em;
       color: #888;
     }
+
+    .fallback {
+      margin-top: 1em;
+      font-size: 0.95em;
+    }
+
+    .fallback a {
+      color: #d33682;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <h1>Oi meu amor 💖</h1>
-  <p>
-    pra vc
-  </p>
+  <p>pra vc</p>
 
-  <video controls playsinline>
-    <source src="segredo.mp4" type="video/mp4">
+  <!-- Ajuste o nome do arquivo se não for 'segredo.mp4' -->
+  <video controls playsinline preload="metadata">
+    <source src="https://abnerg77.github.io/oii/segredo.mp4" type="video/mp4">
     Seu navegador não suporta vídeo 😢
   </video>
+
+  <p class="fallback">
+    Se o vídeo não carregar, <a href="https://abnerg77.github.io/oii/segredo.mp4" target="_blank" rel="noopener">abra diretamente</a>.<br>
+    Página original: <a href="https://abnerg77.github.io/oii/" target="_blank" rel="noopener">https://abnerg77.github.io/oii/</a>
+  </p>
 
   <small>Volte a me amar pf</small>
 </body>
